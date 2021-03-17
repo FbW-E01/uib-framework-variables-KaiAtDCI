@@ -2,7 +2,9 @@
 @import "../../node_modules/bootstrap/scss/bootstrap";
 
 $nav-height: 5vh;
+$nav-min-height: 1.5em;
 $footer-height: $nav-height;
+$footer-min-height: 1.5em;
 $border: 1px solid $border-color;
 $border-radius: 5px;
 
@@ -33,6 +35,8 @@ nav {
   align-items: center;
   width: 100%;
   height: $nav-height;
+  min-height: $nav-min-height;
+
   flex-shrink: 0;
   background-color: map-get($colors, nav-background);
   color: map-get($colors, "nav-color")
@@ -110,6 +114,7 @@ footer {
   align-items: center;
   width: 100%;
   height: $footer-height;
+  min-height: $footer-min-height;
   background-color: map-get($colors, footer-background);
   color: map-get($colors, "footer-color")
 }
