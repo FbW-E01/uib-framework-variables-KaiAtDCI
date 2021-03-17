@@ -72,6 +72,51 @@ main {
     }
 }
 
+aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 90%;
+  padding: 1em 1em 0 1em;
+  margin: 1em auto;
+  border: $border;
+  border-radius: $border-radius;
+  h4 {
+    margin-top: .5em;
+  }
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 90%;
+  padding: 1em 1em 0 1em;
+  margin: 1em auto;
+  border: $border;
+  border-radius: $border-radius;
+  h4 {
+    margin-top: .5em;
+  }
+}
+
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: $footer-height;
+  background-color: map-get($colors, footer-background);
+  color: map-get($colors, "footer-color")
+}
+
 footer {
   display: flex;
   justify-content: space-evenly;
