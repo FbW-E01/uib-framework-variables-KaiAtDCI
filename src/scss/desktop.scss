@@ -7,6 +7,7 @@ $footer-height: $nav-height;
 $footer-min-height: 1.5em;
 $border: 1px solid $border-color;
 $border-radius: 5px;
+$default-page-width: 90%;
 
 $colors: (
         "body-background": bisque,
@@ -62,10 +63,10 @@ main {
 
 .card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  width: 90%;
+  width: 40%;
   padding: 1em;
   margin: 1em auto;
   background-color: map-get($colors, "card-background");
@@ -77,12 +78,36 @@ main {
     }
 }
 
+.text {
+  height: 100%;
+  text-align: justify;
+  margin-left: 1em;
+    h4 {
+      padding: 0;
+      margin: 0;
+    }
+}
+
+.cards-section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.articles-and-asides {
+  width: $default-page-width;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
 aside {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  width: 90%;
+  width: $default-page-width;
   padding: 1em 1em 0 1em;
   margin: 1em auto;
   border: $border;
@@ -97,13 +122,15 @@ article {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  width: 90%;
-  padding: 1em 1em 0 1em;
-  margin: 1em auto;
+  padding: 0 1em 0 1em;
+  margin: 1em 1em;
   border: $border;
   border-radius: $border-radius;
   h4 {
     margin-top: .5em;
+  }
+  p {
+    text-align: justify;
   }
 }
 
